@@ -31,10 +31,10 @@ $(BIN_DIR)/%.o: %.c | $(BIN_DIR)
 
 # Debug target (compiles with debug flags)
 lilo: CFLAGS += $(DEBUG_FLAGS)
-lilo: $(EXEC)
+lilo: stitch
 
 # Checks all outputs for all test cases
-pleakley: $(EXEC)
+pleakley: stitch
 	@for testfile in testcases/*; do \
 		echo "Running $$testfile..."; \
 		./$(EXEC) -w $$testfile; \
