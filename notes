@@ -1,0 +1,2 @@
+gcc -Wall -Wextra -O2 -c main.c -o bin/main.o && gcc -Wall -Wextra -O2 -c parser.c -o bin/parser.o && gcc -Wall -Wextra -O2 -c util.c -o bin/util.o
+ to recompile the non readables.
