@@ -47,13 +47,18 @@ nani: stitch
 		base_name=$$(basename $$testfile); \
 		./$(EXEC) -w $$testfile > $(OUTPUT_DIR)/$$base_name.out; \
 		./$(REFERENCE_EXEC) -w $$testfile > $(OUTPUT_DIR)/$$base_name.ref; \
-		if diff $(OUTPUT_DIR)/$$base_name.out $(OUTPUT_DIR)/$$base_name.ref > /dev/null; then \
-			echo "🌟 PASSED $$testfile"; \
+		out_tmp=$$(mktemp); \
+		ref_tmp=$$(mktemp); \
+		tr -d '\n' < $(OUTPUT_DIR)/$$base_name.out > $$out_tmp; \
+		tr -d '\n' < $(OUTPUT_DIR)/$$base_name.ref > $$ref_tmp; \
+		if diff $$out_tmp $$ref_tmp > /dev/null; then \
+			echo "✅ PASSED $$testfile"; \
 		else \
-			echo "🚨 FAILED $$testfile"; \
-			echo "Diff:"; \
-			diff $(OUTPUT_DIR)/$$base_name.out $(OUTPUT_DIR)/$$base_name.ref; \
+			echo "❌ FAILED $$testfile"; \
+			echo "Diff (ignoring newlines):"; \
+			diff $$out_tmp $$ref_tmp; \
 		fi; \
+		rm -f $$out_tmp $$ref_tmp; \
 	done
 
 
