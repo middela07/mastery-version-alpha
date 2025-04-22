@@ -17,7 +17,7 @@ void autocomplete(trie_node_t* root, char* prefix) {
     int len = 0;
     trie_node_t* letter = root;
     char* itr = prefix;
-    while (*itr && len < MAX_WORD_LENGTH) {
+    while (*itr && len < MAX_WORD_LENGTH && letter != NULL) {
         letter = letter->children[*itr - FIRST_VALID_CHAR];
         itr++;
         len++;
