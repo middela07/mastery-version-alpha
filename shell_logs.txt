@@ -1,0 +1,49 @@
+ git clone git@github.com:middela07/mastery-version-alpha.git
+  500  ls
+  501  make pleakley
+  502  make stitch
+  503  make pleakley
+  504  make nani
+  505  make cobra
+  506  make lilo
+  507  bin/trie.o
+  508  bin/trie
+  509  bin/second_trie
+  510  bin/second_trie testcases/dinosaurs.in
+  511  bin/second_trie -w testcases/dinosaurs.in
+  512  bin/trie_ref -w testcases/dinosaurs.in
+  513  bin/trie_ref
+  514  ./bin/trie_ref
+  515  bin/trie_ref
+  516  make cobra
+  517  make lilo
+  518  gdb bin/second_trie
+  519  bin/second_trie
+  520  bin/second_trie -w testcases/dinosaurs.in
+  521  bin/second_trie -w testcases/easy.in
+  522  make cobra
+  523  make lilo
+  524  gdb bin/second_trie
+  525  make cobra
+  526  make lilo
+  527  bin/second_trie
+  528  bin/second_trie -w dinosaurs.in
+  529  bin/second_trie -w dinosaurs
+  530  bin/second_trie -w testcases/dinosaurs.in
+  531  make pleakley
+  532  make nani
+  533  make cobra
+  534  make nani
+  535  git status
+  536  trie_ref -w testcases/dinosaurs.in
+  537  bin/second_trie -w testcases/dinosaurs.in
+  538  git status
+  539  git add .
+  540  git commit -m passed all tests
+  541  git push
+  542  git status
+  543  ls
+  544  cd
+  545  ls
+  546  cd mastery-version-alpha/
+  547  history
